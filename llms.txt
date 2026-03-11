@@ -1,0 +1,135 @@
+# `accrualPlot`
+
+[![](https://www.r-pkg.org/badges/version/accrualPlot?color=green)](https://cran.r-project.org/package=accrualPlot)
+[![](https://img.shields.io/badge/dev%20version-1.0.10-blue.svg)](https://github.com/dcr-unibe-ch/accrualPlot)
+[![Actions
+Status](https://github.com/dcr-unibe-ch/accrualPlot/workflows/R-CMD-check/badge.svg)](https://github.com/dcr-unibe-ch/accrualPlot/actions)
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/accrualPlot)](https://cran.r-project.org/package=accrualPlot)
+
+Accrual plots are an important tool when monitoring clinical trials.
+Some trials are terminated early due to low accrual, which is a waste of
+resources (including time). Assessing accrual rates can also be useful
+for planning analyses and estimating how long a trial needs to continue
+recruiting participants. `accrualPlot` provides tools for such plots
+
+## Installation
+
+`accrualPlot` can be installed from CRAN in the usual manner:
+
+``` r
+install.packages('accrualPlot')
+```
+
+The development version of the package can be installed from the DCR
+universe via
+
+``` r
+install.packages('accrualPlot', repos = c('https://dcr-unibe-ch.r-universe.dev', 'https://cloud.r-project.org'))
+```
+
+`accrualPlot` can be installed directly from github with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("dcr-unibe-ch/accrualPlot")
+```
+
+Note that `remotes` treats any warnings (e.g. that a certain package was
+built under a different version of R) as errors. If you see such an
+error, run the following line and try again:
+
+``` r
+Sys.setenv(R_REMOTES_NO_ERRORS_FROM_WARNINGS = "true")
+```
+
+## Overview
+
+The first step to using `accrualPlot` is to create an accrual dataframe.
+This is simply a dataframe with a counts of participants included per
+day.
+
+``` r
+# load package
+library(accrualPlot)
+#> Loading required package: lubridate
+#> 
+#> Attaching package: 'lubridate'
+#> The following objects are masked from 'package:base':
+#> 
+#>     date, intersect, setdiff, union
+
+# demonstration data
+data(accrualdemo)
+
+df <- accrual_create_df(accrualdemo$date)
+```
+
+Cumulative and absolute recruitment plots , as well as a method to
+predict the time point of study completion, are included.
+
+``` r
+par(mfrow = c(1,3))
+plot(df, which = "cum")
+plot(df, which = "abs")
+plot(df, which = "pred", target = 300)
+```
+
+![](reference/figures/README-unnamed-chunk-3-1.png)
+
+### Acknowledgements
+
+The package logo was created with
+[`ggplot2`](https://ggplot2.tidyverse.org/) and
+[`hexSticker`](https://github.com/GuangchuangYu/hexSticker) with icons
+from [Font Awesome](https://fontawesome.com/) (via the [emojifont
+package](https://github.com/GuangchuangYu/emojifont)).
+
+# Package index
+
+## All functions
+
+- [`accrual_create_df()`](accrual_create_df.md) : accrual_create_df
+
+- [`accrual_linear_model()`](accrual_linear_model.md) :
+  accrual_linear_model
+
+- [`accrual_plot_abs()`](accrual_plot_abs.md)
+  [`gg_accrual_plot_abs()`](accrual_plot_abs.md) : Absolute accrual
+  plots
+
+- [`accrual_plot_cum()`](accrual_plot_cum.md)
+  [`gg_accrual_plot_cum()`](accrual_plot_cum.md) : Cumulative accrual
+  plots
+
+- [`accrual_plot_predict()`](accrual_plot_predict.md)
+  [`gg_accrual_plot_predict()`](accrual_plot_predict.md) : Accrual
+  prediction plots
+
+- [`accrual_predict()`](accrual_predict.md) : accrual_predict
+
+- [`accrual_table()`](accrual_table.md) : accrual_table
+
+- [`accrual_time_unit()`](accrual_time_unit.md) : accrual_time_unit
+
+- [`accrualdemo`](accrualdemo.md) : Demonstration data set
+
+- [`as.data.frame(`*`<accrual_list>`*`)`](as.data.frame.accrual_list.md)
+  : as.data.frame method for accural_list objects
+
+- [`plot(`*`<accrual_df>`*`)`](plot.accrual_df.md) :
+
+  Plot method for accrual data frames produced by `accrual_create_df`
+
+- [`print(`*`<accrual_df>`*`)`](print.accrual_df.md)
+  [`print(`*`<accrual_list>`*`)`](print.accrual_df.md) : Print methods
+  for accrual objects
+
+- [`summary(`*`<accrual_df>`*`)`](summary.accrual_df.md) : Summary
+  method for accrual_dfs (as created by accrual_create_df)
+
+# Articles
+
+### All vignettes
+
+- [accrualPlot](accrualPlot.md):
