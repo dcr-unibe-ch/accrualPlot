@@ -1,14 +1,14 @@
 Package: accrualPlot
 Type: Package
 Title: Accrual Plots and Predictions for Clinical Trials
-Version: 1.0.9
+Version: 1.0.10
 Authors@R: 
     c(
     person(given = "Lukas", family = "Bütikofer", role = c("cre", "aut"),
-    email = "lukas.buetikofer@ctu.unibe.ch"),
+    email = "lukas.buetikofer@unibe.ch"),
     person(given = "Alan G.", family = "Haynes", role = "aut",
-    email = "alan.haynes@ctu.unibe.ch"))
-Maintainer: Lukas Bütikofer <lukas.buetikofer@ctu.unibe.ch>
+    email = "alan.haynes@unibe.ch"))
+Maintainer: Lukas Bütikofer <lukas.buetikofer@unibe.ch>
 Description: Tracking accrual in clinical trials is important for trial success. 
     If accrual is too slow, the trial will take too long and be too expensive. If
     accrual is much faster than expected, time sensitive tasks such as the writing 
@@ -16,8 +16,8 @@ Description: Tracking accrual in clinical trials is important for trial success.
     functions to aid the tracking of accrual and predict when a trial will reach 
     it's intended sample size.
 License: MIT + file LICENSE
-URL: https://github.com/CTU-Bern/accrualPlot, https://ctu-bern.github.io/accrualPlot/
-BugReports: https://github.com/CTU-Bern/accrualPlot/issues
+URL: https://github.com/dcr-unibe-ch/accrualPlot, https://dcr-unibe-ch.github.io/accrualPlot/
+BugReports: https://github.com/dcr-unibe-ch/accrualPlot/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 Depends:
@@ -30,7 +30,7 @@ Imports:
     magrittr,
     purrr,
     rlang
-RoxygenNote: 7.2.1
+RoxygenNote: 7.3.3
 Suggests: 
     knitr,
     markdown,

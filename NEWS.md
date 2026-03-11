@@ -1,3 +1,7 @@
+accrualPlot 1.0.10
+------------------
+update URLs due to relocation of the github organization
+
 accrualPlot 1.0.9
 ------------------
 accrual_create_df: warning if by refers to a NULL object
