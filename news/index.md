@@ -2,7 +2,8 @@
 
 ## accrualPlot 1.0.10
 
-update URLs due to relocation of the github organization
+update URLs due to relocation of the github organization update to tests
+to use vdiffr v1
 
 ## accrualPlot 1.0.9
 
