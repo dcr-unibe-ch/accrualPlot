@@ -4,9 +4,9 @@
 # `accrualPlot` <img src='man/figures/logo.png' align="right" width="200">
 
 [![](https://www.r-pkg.org/badges/version/accrualPlot?color=green)](https://cran.r-project.org/package=accrualPlot)
-[![](https://img.shields.io/badge/dev%20version-1.0.9-blue.svg)](https://github.com/CTU-Bern/accrualPlot)
+[![](https://img.shields.io/badge/dev%20version-1.0.10-blue.svg)](https://github.com/dcr-unibe-ch/accrualPlot)
 [![Actions
-Status](https://github.com/CTU-Bern/accrualPlot/workflows/R-CMD-check/badge.svg)](https://github.com/CTU-Bern/accrualPlot/actions)
+Status](https://github.com/dcr-unibe-ch/accrualPlot/workflows/R-CMD-check/badge.svg)](https://github.com/dcr-unibe-ch/accrualPlot/actions)
 [![metacran
 downloads](https://cranlogs.r-pkg.org/badges/grand-total/accrualPlot)](https://cran.r-project.org/package=accrualPlot)
 <!-- ![travis](https://travis-ci.com/CTU-Bern/presize.svg?branch=master) -->
@@ -27,18 +27,18 @@ recruiting participants. `accrualPlot` provides tools for such plots
 install.packages('accrualPlot')
 ```
 
-The development version of the package can be installed from the CTU
-Bern universe via
+The development version of the package can be installed from the DCR
+universe via
 
 ``` r
-install.packages('accrualPlot', repos = c('https://ctu-bern.r-universe.dev', 'https://cloud.r-project.org'))
+install.packages('accrualPlot', repos = c('https://dcr-unibe-ch.r-universe.dev', 'https://cloud.r-project.org'))
 ```
 
-`accrualPlot` can be installed directly from from github with:
+`accrualPlot` can be installed directly from github with:
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("CTU-Bern/accrualPlot")
+remotes::install_github("dcr-unibe-ch/accrualPlot")
 ```
 
 Note that `remotes` treats any warnings (e.g. that a certain package was
